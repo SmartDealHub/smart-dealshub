@@ -103,7 +103,7 @@
 }
   </style>
 </head>
-<script>
+
 
 <body>
 
@@ -300,9 +300,22 @@ Handpicked products with the best prices and deals.
   </p>
 </footer>
 <script>
+
+document.addEventListener("DOMContentLoaded", function () {
+
 const searchInput = document.querySelector("input[type='text']");
 const cards = document.querySelectorAll(".card");
 
+searchInput.addEventListener("keyup", function () {
+  const value = this.value.toLowerCase();
+
+  cards.forEach(card => {
+    const text = card.innerText.toLowerCase();
+    card.style.display = text.includes(value) ? "block" : "none";
+  });
+});
+
+});
 searchInput.addEventListener("keyup", function () {
   const value = this.value.toLowerCase();
 
@@ -317,7 +330,6 @@ searchInput.addEventListener("keyup", function () {
   });
 });
 </script>
-<script>
 
 </body>
 </html>

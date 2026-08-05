@@ -104,23 +104,6 @@
   </style>
 </head>
 <script>
-const searchInput = document.querySelector("input[type='text']");
-const cards = document.querySelectorAll(".card");
-
-searchInput.addEventListener("keyup", function () {
-  const value = this.value.toLowerCase();
-
-  cards.forEach(card => {
-    const text = card.innerText.toLowerCase();
-
-    if (text.includes(value)) {
-      card.style.display = "block";
-    } else {
-      card.style.display = "none";
-    }
-  });
-});
-</script>
 
 <body>
 
@@ -167,13 +150,14 @@ searchInput.addEventListener("keyup", function () {
     placeholder="🔍 Search Products..."
     style="width:80%; max-width:400px; padding:10px; border-radius:8px; border:1px solid #ccc;">
 </div>
-
+<div style="text-align:center; margin:20px;">
 <button class="category-btn">⌚ Smart Watches</button>
 <button class="category-btn">🎧 Earbuds</button>
 <button class="category-btn">👕 Fashion</button>
 <button class="category-btn">🔋 Power Banks</button>
 <button class="category-btn">🎒 Bags</button>
 <button class="category-btn">💡 Home</button>
+</div>
 
 <h2 style="text-align:center; font-size:32px; margin-top:30px;">
 ⭐ Featured Products
@@ -182,7 +166,7 @@ searchInput.addEventListener("keyup", function () {
 <p style="text-align:center; color:#666;">
 Handpicked products with the best prices and deals.
 </p>
-<section class="products">
+<section class="products" id="products">
 
 <div class="card">
  <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30" width="250" style="max-width:100%; border-radius:10px;">
@@ -218,7 +202,6 @@ Handpicked products with the best prices and deals.
     <button>View Deal</button>
   </a>
 </div>
-<div class="card">
   <div class="card">
   <img src="https://images.unsplash.com/photo-1445205170230-053b83016050" width="250" style="max-width:100%; border-radius:10px;">
 
@@ -316,6 +299,24 @@ Handpicked products with the best prices and deals.
     <a href="disclaimer.html">Disclaimer</a>
   </p>
 </footer>
+<script>
+const searchInput = document.querySelector("input[type='text']");
+const cards = document.querySelectorAll(".card");
+
+searchInput.addEventListener("keyup", function () {
+  const value = this.value.toLowerCase();
+
+  cards.forEach(card => {
+    const text = card.innerText.toLowerCase();
+
+    if (text.includes(value)) {
+      card.style.display = "block";
+    } else {
+      card.style.display = "none";
+    }
+  });
+});
+</script>
 
 </body>
 </html>

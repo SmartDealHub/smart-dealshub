@@ -1,1 +1,5 @@
- 
+ User-agent: *
+
+Allow: /
+
+Sitemap: https://smartdealhub.github.io/smart-dealshub/sitemap.xml

@@ -128,7 +128,7 @@
 <section class="hero">
   <h1>Find The Best Products Online</h1>
   <p>Discover amazing deals and smart buying guides.</p>
-<p style="font-size:18px; color:#555;">
+<p style="font-size:18px; color:white;">
 ✅ Updated Daily &nbsp; | &nbsp;
 🚚 Fast Delivery &nbsp; | &nbsp;
 💰 Best Prices
@@ -276,9 +276,9 @@ Handpicked products with the best prices and deals.
   <p>10000mAh Portable Power Bank.</p>
   <p><del>₹2,499</del> <span style="color:green;font-weight:bold;">₹1,299 (48% OFF)</span></p>
 
-  https://link.amazon/B03w42FJW
-    <button>View Deal</button>
-  </a>
+  <a href="https://link.amazon/B03w42FJW" target="_blank">
+  <button>View Deal</button>
+</a>
 </div>
   <div class="card">
   <img src="https://images.unsplash.com/photo-1445205170230-053b83016050" width="250" style="max-width:100%; border-radius:10px;">
@@ -306,9 +306,9 @@ Handpicked products with the best prices and deals.
   <p>Strong and adjustable mobile holder.</p>
   <p><del>₹799</del> <span style="color:green;font-weight:bold;">₹399 (50% OFF)</span></p>
 
-  https://link.amazon/B0c2gSf6F
-    <button>View Deal</button>
-  </a>
+  <a href="https://link.amazon/B0c2gSf6F" target="_blank">
+  <button>View Deal</button>
+</a>
 </div>
 <div class="card">
   <img src="https://images.unsplash.com/photo-1587829741301-dc798b83add3" width="250" style="max-width:100%; border-radius:10px;">
@@ -317,9 +317,9 @@ Handpicked products with the best prices and deals.
   <p>Slim wireless keyboard for work and study.</p>
   <p><del>₹1,999</del> <span style="color:green;font-weight:bold;">₹999 (50% OFF)</span></p>
 
-  https://link.amazon/B09dhZhcE
-    <button>View Deal</button>
-  </a>
+  <a href="https://link.amazon/B09dhZhcE" target="_blank">
+  <button>View Deal</button>
+</a>
 </div>
 <div class="card">
   <img src="https://images.unsplash.com/photo-1527814050087-3793815479db" width="250" style="max-width:100%; border-radius:10px;">
@@ -328,9 +328,9 @@ Handpicked products with the best prices and deals.
   <p>Comfortable wireless mouse for laptop and PC.</p>
   <p><del>₹999</del> <span style="color:green;font-weight:bold;">₹499 (50% OFF)</span></p>
 
-  https://link.amazon/B09HT6Daw
-    <button>View Deal</button>
-  </a>
+  <a href="https://link.amazon/B09HT6Daw" target="_blank">
+  <button>View Deal</button>
+</a>
 </div>
 <div class="card">
   <img src="https://images.unsplash.com/photo-1608043152269-423dbba4e7e1" width="250" style="max-width:100%; border-radius:10px;">
@@ -339,9 +339,9 @@ Handpicked products with the best prices and deals.
   <p>Portable Bluetooth speaker with powerful sound.</p>
   <p><del>₹2,999</del> <span style="color:green;font-weight:bold;">₹1,499 (50% OFF)</span></p>
 
-  https://link.amazon/B05kPF0aW
-    <button>View Deal</button>
-  </a>
+  <a href="https://link.amazon/B05kPF0aW" target="_blank">
+  <button>View Deal</button>
+</a>
 </div>
 <div class="card">
   <img src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62" width="250" style="max-width:100%; border-radius:10px;">
@@ -350,9 +350,9 @@ Handpicked products with the best prices and deals.
   <p>Stylish and durable backpack for travel and college.</p>
   <p><del>₹1,999</del> <span style="color:green;font-weight:bold;">₹899 (55% OFF)</span></p>
 
-  https://link.amazon/B0aZ7UKu0
-    <button>View Deal</button>
-  </a>
+  <a href="https://link.amazon/B0aZ7UKu0" target="_blank">
+  <button>View Deal</button>
+</a>
 </div>
 <div class="card">
   <img src="https://images.unsplash.com/photo-1507473885765-e6ed057f782c" width="250" style="max-width:100%; border-radius:10px;">
@@ -361,9 +361,9 @@ Handpicked products with the best prices and deals.
   <p>Modern LED lamp for home and study table.</p>
   <p><del>₹1,499</del> <span style="color:green;font-weight:bold;">₹699 (50% OFF)</span></p>
 
-     https://link.amazon/B08KI3rwJ
-    <button>View Deal</button>
-  </a>
+     <a href="https://link.amazon/B08KI3rwJ" target="_blank">
+  <button>View Deal</button>
+</a>
 </div>
 </section>
 
@@ -378,34 +378,23 @@ Handpicked products with the best prices and deals.
   </p>
 </footer>
 <script>
-
 document.addEventListener("DOMContentLoaded", function () {
 
-const searchInput = document.querySelector("input[type='text']");
-const cards = document.querySelectorAll(".card");
+  const searchInput = document.querySelector("input[type='text']");
+  const cards = document.querySelectorAll(".card");
 
-searchInput.addEventListener("keyup", function () {
-  const value = this.value.toLowerCase();
+  searchInput.addEventListener("keyup", function () {
+    const value = this.value.toLowerCase();
 
-  cards.forEach(card => {
-    const text = card.innerText.toLowerCase();
-    card.style.display = text.includes(value) ? "block" : "none";
+    cards.forEach(card => {
+      const text = card.innerText.toLowerCase();
+      card.style.display = text.includes(value) ? "block" : "none";
+    });
   });
-});
 
 });
-  const value = this.value.toLowerCase();
-
-  cards.forEach(card => {
-    const text = card.innerText.toLowerCase();
-
-    if (text.includes(value)) {
-      card.style.display = "block";
-    } else {
-      card.style.display = "none";
-    }
-  });
-});
+</script>
+  
 
 
 </body>

@@ -1,41 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
-<url>
-<loc>https://smartdealhub.github.io/smart-dealshub/</loc>
-</url>
+  <url>
+    <loc>https://smartdealhub.github.io/smart-dealshub/</loc>
+  </url>
 
-<url>
-<loc>https://smartdealhub.github.io/smart-dealshub/about.html</loc>
-</url>
+  <url>
+    <loc>https://smartdealhub.github.io/smart-dealshub/about.html</loc>
+  </url>
 
-<url>
-<loc>https://smartdealhub.github.io/smart-dealshub/contact.html</loc>
-</url>
+  <url>
+    <loc>https://smartdealhub.github.io/smart-dealshub/contact.html</loc>
+  </url>
 
-<url>
-<loc>https://smartdealhub.github.io/smart-dealshub/privacy.html</loc>
-</url>
+  <url>
+    <loc>https://smartdealhub.github.io/smart-dealshub/privacy.html</loc>
+  </url>
 
-<url>
-<loc>https://smartdealhub.github.io/smart-dealshub/disclaimer.html</loc>
-</url>
-
-<url>
-<loc>https://smartdealhub.github.io/smart-dealshub/best-smartwatch-under-2000.html</loc>
-</url>
-
-<url>
-<loc>https://smartdealhub.github.io/smart-dealshub/best-wireless-earbuds.html</loc>
-</url>
-
-<url>
-<loc>https://smartdealhub.github.io/smart-dealshub/best-power-bank.html</loc>
-</url>
-
-<url>
-<loc>https://smartdealhub.github.io/smart-dealshub/best-backpack.html</loc>
-</url>
+  <url>
+    <loc>https://smartdealhub.github.io/smart-dealshub/disclaimer.html</loc>
+  </url>
 
 </urlset>

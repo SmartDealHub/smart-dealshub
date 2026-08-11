@@ -529,21 +529,57 @@ Best Backpacks Under ₹1000 (2026)
   </p>
 </footer>
 <script>
+<script>
 document.addEventListener("DOMContentLoaded", function () {
 
   const searchInput = document.querySelector("input[type='text']");
   const cards = document.querySelectorAll(".card");
 
-  searchInput.addEventListener("keyup", function () {
-    const value = this.value.toLowerCase();
+  searchInput.addEventListener("input", function () {
+
+    const value = this.value.trim().toLowerCase();
+    let found = 0;
 
     cards.forEach(card => {
+
       const text = card.innerText.toLowerCase();
-      card.style.display = text.includes(value) ? "block" : "none";
+
+      if (text.includes(value)) {
+        card.style.display = "";
+        found++;
+      } else {
+        card.style.display = "none";
+      }
+
     });
+
+    let noResults = document.getElementById("no-results");
+
+    if (found === 0 && value !== "") {
+
+      if (!noResults) {
+        noResults = document.createElement("p");
+        noResults.id = "no-results";
+        noResults.style.textAlign = "center";
+        noResults.style.fontSize = "20px";
+        noResults.style.fontWeight = "bold";
+        noResults.style.padding = "20px";
+        noResults.innerText = "❌ No products found";
+        document.getElementById("products").after(noResults);
+      }
+
+    } else {
+
+      if (noResults) {
+        noResults.remove();
+      }
+
+    }
+
   });
 
 });
+</script>
 </script> 
   
 

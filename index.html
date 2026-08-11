@@ -528,60 +528,34 @@ Best Backpacks Under ₹1000 (2026)
     <a href="disclaimer.html">Disclaimer</a>
   </p>
 </footer>
-<script>
-<script>
+    
+
+  <script>
 document.addEventListener("DOMContentLoaded", function () {
 
-  const searchInput = document.querySelector("input[type='text']");
-  const cards = document.querySelectorAll(".card");
+  const searchInput = document.querySelector("input[placeholder*='Search Products']");
+  const cards = document.querySelectorAll("#products .card");
 
   searchInput.addEventListener("input", function () {
 
-    const value = this.value.trim().toLowerCase();
-    let found = 0;
+    const searchText = searchInput.value.toLowerCase().trim();
 
-    cards.forEach(card => {
+    cards.forEach(function (card) {
 
-      const text = card.innerText.toLowerCase();
+      const productText = card.textContent.toLowerCase();
 
-      if (text.includes(value)) {
+      if (productText.includes(searchText)) {
         card.style.display = "";
-        found++;
       } else {
         card.style.display = "none";
       }
 
     });
 
-    let noResults = document.getElementById("no-results");
-
-    if (found === 0 && value !== "") {
-
-      if (!noResults) {
-        noResults = document.createElement("p");
-        noResults.id = "no-results";
-        noResults.style.textAlign = "center";
-        noResults.style.fontSize = "20px";
-        noResults.style.fontWeight = "bold";
-        noResults.style.padding = "20px";
-        noResults.innerText = "❌ No products found";
-        document.getElementById("products").after(noResults);
-      }
-
-    } else {
-
-      if (noResults) {
-        noResults.remove();
-      }
-
-    }
-
   });
 
 });
 </script>
-</script> 
-  
 
 
 </body>

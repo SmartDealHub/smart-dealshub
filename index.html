@@ -284,7 +284,7 @@ Best Backpacks Under ₹1000 (2026)
 </a>
 </div>
  
-<div class="card">
+<div class="card" data-category="earbuds">
    <img src="wireless-earbuds.jpg"
      width="250"
      style="max-width:100%; border-radius:10px;"
@@ -302,7 +302,7 @@ Best Backpacks Under ₹1000 (2026)
 </div>
 
 
-<div class="card">
+<div class="card" data-category="powerbank">
   <img src="power-bank.jpg"
      width="250"
      style="max-width:100%; border-radius:10px;"
@@ -338,7 +338,7 @@ Best Backpacks Under ₹1000 (2026)
   <button type="button">View Deal</button>
 </a>
 </div>
-<div class="card">
+<div class="card" data-category="electronics">
   <img src="https://images.unsplash.com/photo-1587829741301-dc798b83add3" width="250" style="max-width:100%; border-radius:10px;">
   <h2>Wireless Keyboard</h2>
   <p style="color:red; font-weight:bold;">⌨️ Trending Gadget</p>
@@ -348,7 +348,7 @@ Best Backpacks Under ₹1000 (2026)
   
   <button>View Deal</button>
 </div>
-<div class="card">
+ <div class="card" data-category="electronics">
   <img src="wireless-mouse.jpg"
      width="250"
      style="max-width:100%; border-radius:10px;"
@@ -365,7 +365,7 @@ Best Backpacks Under ₹1000 (2026)
   <button type="button">View Deal</button>
 </a>
 </div>
-<div class="card">
+<div class="card" data-category="electronics">
   <img src="https://images.unsplash.com/photo-1608043152269-423dbba4e7e1" width="250" style="max-width:100%; border-radius:10px;">
   <h2>Bluetooth Speaker</h2>
   <p style="color:red; font-weight:bold;">🔊 Trending Audio</p>
@@ -375,7 +375,7 @@ Best Backpacks Under ₹1000 (2026)
   
   <button>View Deal</button>
 </div>
-<div class="card">
+<div class="card" data-category="bags">
   <img src="backpack.jpg"
      width="250"
      style="max-width:100%; border-radius:10px;"
@@ -394,7 +394,7 @@ Best Backpacks Under ₹1000 (2026)
 </a>
 
 </div>
-<div class="card">
+<div class="card" data-category="home">
   <img src="led-lamp.jpg"
      width="250"
      style="max-width:100%; border-radius:10px;"
@@ -470,7 +470,7 @@ Best Backpacks Under ₹1000 (2026)
 </a>
 </div>
 
-<div class="card"> 
+<div class="card" data-category="fashion">
   <img src="stitched-kurti.jpg"
      width="250"
      style="max-width:100%; border-radius:10px;"
@@ -493,7 +493,7 @@ Best Backpacks Under ₹1000 (2026)
   <button type="button">View Deal</button>
 </a>
 </div>
-<div class="card">
+<div class="card" data-category="fashion">
   <img src="crystal-bracelet-watch.jpg"
      width="250"
      style="max-width:100%; border-radius:10px;"
@@ -549,6 +549,44 @@ document.addEventListener("DOMContentLoaded", function () {
       } else {
         card.style.display = "none";
       }
+
+    });
+
+  });
+
+});
+</script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  const categoryButtons = document.querySelectorAll(".category-btn");
+  const products = document.querySelectorAll("#products .card");
+
+  categoryButtons.forEach(function (button) {
+
+    button.addEventListener("click", function () {
+
+      const category = button.innerText.toLowerCase();
+
+      products.forEach(function (product) {
+
+        const productCategory =
+          product.getAttribute("data-category");
+
+        if (
+          (category.includes("smart") && productCategory === "watch") ||
+          (category.includes("earbud") && productCategory === "earbuds") ||
+          (category.includes("power") && productCategory === "powerbank") ||
+          (category.includes("bag") && productCategory === "bags") ||
+          (category.includes("home") && productCategory === "home") ||
+          (category.includes("fashion") && productCategory === "fashion")
+        ) {
+          product.style.display = "";
+        } else {
+          product.style.display = "none";
+        }
+
+      });
 
     });
 

@@ -935,38 +935,27 @@ Best Backpacks Under ₹1000 (2026)
     <a href="disclaimer.html">Disclaimer</a>
   </p>
 </footer>
-    
 
-  <script>
+   <script>
 document.addEventListener("DOMContentLoaded", function () {
 
   const searchInput = document.querySelector(
     "input[placeholder*='Search Products']"
   );
 
+  const productSelect = document.getElementById("productSelect");
   const products = document.querySelectorAll("#products .card");
 
-  const categoryButtons = document.querySelectorAll(".category-btn");
-
-  let selectedCategory = "all";
-
-  function filterProducts() {
+  // Search Products
+  searchInput.addEventListener("input", function () {
 
     const searchText = searchInput.value.toLowerCase().trim();
 
     products.forEach(function (product) {
 
       const productText = product.textContent.toLowerCase();
-      const productCategory = product.getAttribute("data-category");
 
-      const matchesSearch =
-        productText.includes(searchText);
-
-      const matchesCategory =
-        selectedCategory === "all" ||
-        productCategory === selectedCategory;
-
-      if (matchesSearch && matchesCategory) {
+      if (productText.includes(searchText)) {
         product.style.display = "";
       } else {
         product.style.display = "none";
@@ -974,40 +963,57 @@ document.addEventListener("DOMContentLoaded", function () {
 
     });
 
-  }
+    // Search करने पर dropdown reset
+    productSelect.value = "";
 
-  searchInput.addEventListener("input", filterProducts);
+  });
 
-  categoryButtons.forEach(function (button) {
 
-    button.addEventListener("click", function () {
+  // Product Dropdown
+  productSelect.addEventListener("change", function () {
 
-      const text = button.innerText.toLowerCase();
+    const selectedProduct = this.value;
 
-      if (text.includes("smart")) {
-        selectedCategory = "watch";
-      } 
-      else if (text.includes("earbud")) {
-        selectedCategory = "earbuds";
-      } 
-      else if (text.includes("power")) {
-        selectedCategory = "powerbank";
-      } 
-      else if (text.includes("bag")) {
-        selectedCategory = "bags";
-      } 
-      else if (text.includes("home")) {
-        selectedCategory = "home";
+    // Select a Product चुना
+    if (selectedProduct === "") {
+
+      products.forEach(function (product) {
+        product.style.display = "";
+      });
+
+      return;
+    }
+
+    products.forEach(function (product) {
+
+      const title = product.querySelector("h2");
+
+      if (
+        title &&
+        title.textContent.trim() === selectedProduct
+      ) {
+
+        product.style.display = "";
+
+        product.scrollIntoView({
+          behavior: "smooth",
+          block: "center"
+        });
+
+      } else {
+
+        product.style.display = "none";
+
       }
-
-      filterProducts();
 
     });
 
   });
 
 });
-</script>
+</script> 
+
+ 
 
 
 </body>

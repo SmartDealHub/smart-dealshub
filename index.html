@@ -43,12 +43,13 @@
 
 
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      background: #f5f5f5;
-    
-    header {
+      body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #f5f5f5;
+}
+
+header {
   background: linear-gradient(135deg, #fff9f0 0%, #ffffff 100%);
   color: #111;
   padding: 25px 20px;
@@ -131,6 +132,32 @@ nav a {
 .card button:hover {
   background: #e68a00;
 }
+ .product-menu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  padding: 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.product-btn {
+  background: #ff9900;
+  color: white;
+  border: none;
+  padding: 12px 18px;
+  border-radius: 25px;
+  font-weight: bold;
+  font-size: 15px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.product-btn:hover {
+  background: #e68a00;
+  transform: translateY(-2px);
+}
     
 
     footer {
@@ -203,13 +230,31 @@ nav a {
     placeholder="🔍 Search Products..."
     style="width:80%; max-width:400px; padding:10px; border-radius:8px; border:1px solid #ccc;">
 </div>
-<div style="text-align:center; margin:20px;">
-<button class="category-btn">⌚ Smart Watches</button>
-<button class="category-btn">🎧 Earbuds</button>
-<button class="category-btn">👕 Fashion</button>
-<button class="category-btn">🔋 Power Banks</button>
-<button class="category-btn">🎒 Bags</button>
-<button class="category-btn">💡 Home</button>
+<div class="product-menu">
+
+  <button class="product-btn">⌚ Smart Watch</button>
+  <button class="product-btn">🎧 Wireless Earbuds</button>
+  <button class="product-btn">🔋 Power Bank</button>
+  <button class="product-btn">📱 Mobile Holder</button>
+  <button class="product-btn">⌨️ Wireless Keyboard</button>
+  <button class="product-btn">🖱️ Wireless Mouse</button>
+  <button class="product-btn">🔊 Bluetooth Speaker</button>
+  <button class="product-btn">🎒 Backpack</button>
+  <button class="product-btn">💡 LED Lamp</button>
+  <button class="product-btn">👕 Oversized T-Shirt</button>
+  <button class="product-btn">👗 Women's Printed Kurti</button>
+  <button class="product-btn">👗 Women's Stitched Kurti</button>
+  <button class="product-btn">⌚ Crystal Bracelet Watch</button>
+  <button class="product-btn">👕 Tee Projekt Men's T-Shirt</button>
+  <button class="product-btn">👗 Black Teetar Kurti</button>
+  <button class="product-btn">🪴 Wooden Planter</button>
+  <button class="product-btn">👕 AUSK Oversized T-Shirt</button>
+  <button class="product-btn">🛁 VERVENIX Bath Mat</button>
+  <button class="product-btn">🪵 Webelkart Wooden Holder</button>
+  <button class="product-btn">🧖 MAXOSHINE Hair Towel Wrap</button>
+  <button class="product-btn">👕 LEOTUDE Men's T-Shirt</button>
+  <button class="product-btn">👚 ALENJAN Women's Top</button>
+
 </div>
 <section id="guides" style="max-width:900px; margin:40px auto; background:white; padding:25px; border-radius:10px; box-shadow:0 0 10px #ccc;">
 

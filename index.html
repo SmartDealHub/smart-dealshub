@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Smart Dealshub brings you the best Amazon deals, trending products, honest reviews, and buying guides across electronics, fashion, home, beauty, and more.">
   <title>Smart Dealshub - Best Deals, Reviews & Buying Guides</title>
-<meta name="keywords" content="Amazon Deals, Best Deals, Smart Dealshub, Electronics, Fashion, Home, Buying Guide">
+
 <link rel="canonical" href="https://smartdealhub.github.io/smart-dealshub/">
 <meta property="og:title" content="Smart Dealshub - Best Deals">
 <meta property="og:description" content="Discover the best Amazon deals, trending products, honest reviews and buying guides.">
@@ -50,6 +50,13 @@
 }
 
 header {
+  background: linear-gradient(135deg, #fff9f0 0%, #ffffff 100%);
+  color: #111;
+  padding: 25px 20px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
 .product-filter {
   text-align: center;
   margin: 25px auto;
@@ -81,11 +88,6 @@ header {
   border-color: #e68a00;
   box-shadow: 0 0 5px rgba(255,153,0,0.35);
 }
-  background: linear-gradient(135deg, #fff9f0 0%, #ffffff 100%);
-  color: #111;
-  padding: 25px 20px;
-  text-align: center;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
 }
 
 nav {
@@ -185,6 +187,7 @@ footer a {
   color: white;
   text-decoration: none;
 }
+</style>
 </head>
 
 
@@ -233,12 +236,13 @@ footer a {
     type="text"
     placeholder="🔍 Search Products..."
     style="width:80%; max-width:400px; padding:10px; border-radius:8px; border:1px solid #ccc;">
-
 </div>
-    style="width:80%; max-width:450px; padding:12px; border-radius:8px; border:1px solid #ccc; font-size:16px;">
 
+<div class="product-filter">
+  <label for="productSelect">🛍️ Select a Product</label>
+
+  <select id="productSelect">
     <option value="">🛍️ Select a Product</option>
-
     <option value="Smart Watch">⌚ Smart Watch</option>
     <option value="Wireless Earbuds">🎧 Wireless Earbuds</option>
     <option value="Power Bank">🔋 Power Bank</option>
@@ -265,7 +269,7 @@ footer a {
  <option value="Acnos Premium Girl's Heart Shape Bangle Watch">⌚ Acnos Premium Girl's Heart Shape Bangle Watch</option>
   </select>
 </div> 
-</div>
+
 
 
 <h2 style="text-align:center; font-size:32px; margin-top:30px;">

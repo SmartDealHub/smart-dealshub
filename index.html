@@ -50,6 +50,37 @@
 }
 
 header {
+.product-filter {
+  text-align: center;
+  margin: 25px auto;
+  padding: 0 15px;
+}
+
+.product-filter label {
+  display: block;
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #222;
+}
+
+.product-filter select {
+  width: 100%;
+  max-width: 450px;
+  padding: 13px 15px;
+  border: 2px solid #ff9900;
+  border-radius: 10px;
+  background: white;
+  color: #222;
+  font-size: 16px;
+  cursor: pointer;
+  outline: none;
+}
+
+.product-filter select:focus {
+  border-color: #e68a00;
+  box-shadow: 0 0 5px rgba(255,153,0,0.35);
+}
   background: linear-gradient(135deg, #fff9f0 0%, #ffffff 100%);
   color: #111;
   padding: 25px 20px;
@@ -69,23 +100,6 @@ nav a {
   text-decoration: none;
   font-weight: bold;
 }
-}
-
-}
-    }
-
-    nav {
-      background: #ff9900;
-      padding: 10px;
-      text-align: center;
-    }
-
-    nav a {
-      color: white;
-      margin: 10px;
-      text-decoration: none;
-      font-weight: bold;
-    }
 
    .hero {
   padding: 80px 20px;
@@ -160,13 +174,17 @@ nav a {
 }
     
 
-    footer {
-      background: #111;
-      color: white;
-      text-align: center;
-      padding: 15px;
-    
-  </style>
+       footer {
+  background: #111;
+  color: white;
+  text-align: center;
+  padding: 15px;
+}
+
+footer a {
+  color: white;
+  text-decoration: none;
+}
 </head>
 
 
@@ -216,8 +234,6 @@ nav a {
     placeholder="🔍 Search Products..."
     style="width:80%; max-width:400px; padding:10px; border-radius:8px; border:1px solid #ccc;">
 </div>
-<div style="text-align:center; margin:20px;">
-  <select id="productSelect"
     style="width:80%; max-width:450px; padding:12px; border-radius:8px; border:1px solid #ccc; font-size:16px;">
 
     <option value="">🛍️ Select a Product</option>

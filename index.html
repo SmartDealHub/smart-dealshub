@@ -1110,27 +1110,36 @@ const products = document.querySelectorAll("#products .card");
 const noResults = document.getElementById("noResults");
 
   // Search Products
-  searchInput.addEventListener("input", function () {
+  
+searchInput.addEventListener("input", function () {
 
-    const searchText = searchInput.value.toLowerCase().trim();
+  const searchText = searchInput.value.toLowerCase().trim();
+  let foundProducts = 0;
 
-    products.forEach(function (product) {
+  products.forEach(function (product) {
 
-      const productText = product.textContent.toLowerCase();
+    const productText = product.textContent.toLowerCase();
 
-      if (productText.includes(searchText)) {
-        product.style.display = "";
-      } else {
-        product.style.display = "none";
-      }
-
-    });
-
-    // Search करने पर dropdown reset
-    productSelect.value = "";
+    if (productText.includes(searchText)) {
+      product.style.display = "";
+      foundProducts++;
+    } else {
+      product.style.display = "none";
+    }
 
   });
 
+  // No products found message
+  if (foundProducts === 0) {
+    noResults.style.display = "block";
+  } else {
+    noResults.style.display = "none";
+  }
+
+  // Search करने पर dropdown reset
+  productSelect.value = "";
+
+});
 
   // Product Dropdown
   productSelect.addEventListener("change", function () {

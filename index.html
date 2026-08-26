@@ -1149,12 +1149,14 @@ searchInput.addEventListener("input", function () {
     // Select a Product चुना
     if (selectedProduct === "") {
 
-      products.forEach(function (product) {
-        product.style.display = "";
-      });
+  products.forEach(function (product) {
+    product.style.display = "";
+  });
 
-      return;
-    }
+  noResults.style.display = "none";
+
+  return;
+}
 
     products.forEach(function (product) {
 
